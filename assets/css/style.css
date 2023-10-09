@@ -1,16 +1,18 @@
 html {
     scroll-behavior: smooth;
 }
+
 * {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     margin: 0;
- }
- h1 {
+}
+
+h1 {
     font-weight: bolder;
- }
- 
- .menu-principal {
+}
+
+.menu-principal {
     grid-area: menu;
     display: flex;
     flex-wrap: wrap;
@@ -19,95 +21,96 @@ html {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
- }
- 
- .logo {
+}
+
+.logo {
     font-size: 20px;
- }
- 
- .menu-icon {
+}
+
+.menu-icon {
     font-size: 30px;
     cursor: pointer;
- 
- }
- 
- .menu {
+
+}
+
+.menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: none;
     width: 100%;
- }
- 
- .menu li {
+}
+
+.menu li {
     display: block;
     text-align: center;
     margin: 10px 0;
- }
- 
- .menu a {
+}
+
+.menu a {
     text-decoration: none;
     color: #fff;
- }
- 
- #menu-toggle {
+}
+
+#menu-toggle {
     display: none;
- }
- 
- #menu-toggle:checked + .menu {
+}
+
+#menu-toggle:checked+.menu {
     display: block;
- }
- 
- .seccion-header {
+}
+
+.seccion-header {
     grid-area: seccion-filtros;
- }
- 
- .seccion-header {
+}
+
+.seccion-header {
     height: 10em;
     text-align: center;
     display: flex;
     flex-direction: column;
     color: white;
-    background-image: url('https://mediaim.expedia.com/destination/1/a20b785320ec9c3cf6e7d8c9a6a6d99b.jpg'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    transition: filter 0.8s; 
+    background-image: url('https://mediaim.expedia.com/destination/1/a20b785320ec9c3cf6e7d8c9a6a6d99b.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: filter 0.8s;
 }
 
 .seccion-header:hover {
-    filter: grayscale(100%); 
+    filter: grayscale(100%);
 }
+
 .seccion-header h1 {
     margin-top: 1.5em;
 }
-  
- .contenido {
+
+.contenido {
     grid-area: seccion-principal;
- }
- 
- .contenido {
+}
+
+.contenido {
     padding: 20px 20px 20px 0;
     background-color: white;
     margin-left: 2%;
- }
- 
- 
- .contenido p {
+}
+
+
+.contenido p {
     margin-top: 5%;
     font-size: small;
     color: black;
- }
+}
 
- section > h2 {
-  margin: 1em 0;
+section>h2 {
+    margin: 1em 0;
     text-align: center;
- }
+}
 
- .galeria {
+.galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .galeria .card {
@@ -118,8 +121,8 @@ html {
     width: 300px;
     height: 200px;
 }
- 
- .card {
+
+.card {
     color: rgb(255, 255, 255);
     background-color: white;
     padding: 20px;
@@ -132,27 +135,27 @@ html {
     perspective: 1000px;
     width: 300px;
     height: 200px;
- }
+}
 
- .card-front:hover {
+.card-front:hover {
     background-color: gray
- }
+}
 
- .card:hover .card-box {
+.card:hover .card-box {
     transform: rotateY(180deg);
 }
 
 .card-box {
     transform-style: preserve-3d;
     transition: all 0.5s linear;
-  }
+}
 
-  .card-front {
+.card-front {
     position: absolute;
     backface-visibility: hidden;
-  }
+}
 
-  .card-back {
+.card-back {
     position: absolute;
     backface-visibility: hidden;
     transform: rotateY(180deg);
@@ -165,108 +168,106 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .card-back p {
+.card-back p {
     color: white;
     font-size: x-small;
-  }
- 
- .card img {
+}
+
+.card img {
     width: 100%;
- }
- 
-  
- footer {
+}
+
+footer {
     grid-area: pie-de-pagina;
     background: #010009;
     color: white;
     padding: 10px;
     text-align: center;
- }
- 
- footer p {
+}
+
+footer p {
     font-size: small;
- }
- 
+}
+
 main {
-     display: grid; 
+    display: grid;
     border: 1px solid black;
     min-height: 100vh;
- 
-     grid-template-areas:
-       "menu"
-       "seccion-filtros"
-       "seccion-principal"
-       "pie-de-pagina";
 
- }
- 
- @media (min-width: 576px) {
-     main {
-       grid-template-areas:
-          "menu seccion-filtros seccion-filtros"
-          "menu seccion-principal seccion-principal"
-          "menu seccion-principal seccion-principal"
-          "pie-de-pagina pie-de-pagina pie-de-pagina";
- 
-       grid-template-columns: 10rem 1fr 1fr;
-    } 
- 
+    grid-template-areas:
+        "menu"
+        "seccion-filtros"
+        "seccion-principal"
+        "pie-de-pagina";
+
+}
+
+@media (min-width: 576px) {
+    main {
+        grid-template-areas:
+            "menu seccion-filtros seccion-filtros"
+            "menu seccion-principal seccion-principal"
+            "menu seccion-principal seccion-principal"
+            "pie-de-pagina pie-de-pagina pie-de-pagina";
+
+        grid-template-columns: 10rem 1fr 1fr;
+    }
+
     .filtros {
-       flex-direction: row;
-       text-align: center;
+        flex-direction: row;
+        text-align: center;
     }
- 
+
     .card img {
-       width: 200px;
-       height: 150px
+        width: 200px;
+        height: 150px
     }
- 
+
     .menu-principal {
-       flex-direction: column;
-       align-items: center;
-       justify-content: flex-start;
-       position: sticky;
-       top: 0;
-       height: 100vh;
- 
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+
     }
- 
+
     .menu {
-       display: flex;
-       color: black;
-       flex-direction: column;
-       margin-top: 35px;
-       font-size: medium;
- 
+        display: flex;
+        color: black;
+        flex-direction: column;
+        margin-top: 35px;
+        font-size: medium;
+
     }
- 
+
     .logo {
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-       font-size: medium;
-       font-weight: bolder;
-       margin-top: 5px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: medium;
+        font-weight: bolder;
+        margin-top: 5px;
     }
 
     .logo i {
         margin-right: 1em;
     }
- 
+
     .menu-icon {
-       display: none;
+        display: none;
     }
- 
+
     nav ul {
-       flex-direction: row;
+        flex-direction: row;
     }
- 
+
     nav li {
-       margin-bottom: 0;
-       margin-right: 20px;
+        margin-bottom: 0;
+        margin-right: 20px;
     }
- 
- }
- 
+
+}
